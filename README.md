@@ -40,7 +40,11 @@ scripts/
 
 | Id | Version | Source |
 | --- | --- | --- |
+| `web.client` | `0.1.1` | [YoloShellWeb](https://github.com/AgentsMesh/YoloShellWeb) |
 | `web.client` | `0.1.0` | [YoloShellWeb](https://github.com/AgentsMesh/YoloShellWeb) |
+
+`web.client` 0.1.0 pinned a client-only source root; the client imports the
+sibling `sdk/`, so an installed 0.1.0 plugin cannot start. Use 0.1.1 or newer.
 
 ## Install
 
@@ -48,7 +52,7 @@ Yolo's `yolo plugin install` consumes these specs:
 
 ```sh
 yolo plugin install web.client --trust
-yolo plugin install web.client --version 0.1.0 --trust
+yolo plugin install web.client --version 0.1.1 --trust
 # a fork or test registry
 yolo plugin install web.client --registry <git-url> --trust
 ```
