@@ -62,7 +62,8 @@ The installer clones this registry, resolves the newest version unless
 the source manifest, copies the plugin into a private managed directory and
 prints the source and digest. It requires the explicit `--trust` preview before
 linking. `yolo plugin link <dir> --trust` remains available for local plugin
-development.
+development. The web client is a Bun process; `bun` must be on `PATH` when Yolo
+starts it.
 
 ## License
 
