@@ -42,12 +42,23 @@ scripts/
 | --- | --- | --- |
 | `web.client` | `0.1.0` | [YoloShellWeb](https://github.com/AgentsMesh/YoloShellWeb) |
 
-## Distribution boundary
+## Install
 
-Yolo's current `yolo plugin` CLI links a local plugin directory with
-`yolo plugin link <dir> --trust`. This registry is the versioned distribution
-index; an install command that consumes these specs is future work. The specs
-remain useful for version history, source pinning and review.
+Yolo's `yolo plugin install` consumes these specs:
+
+```sh
+yolo plugin install web.client --trust
+yolo plugin install web.client --version 0.1.0 --trust
+# a fork or test registry
+yolo plugin install web.client --registry <git-url> --trust
+```
+
+The installer clones this registry, resolves the newest version unless
+`--version` is given, clones the pinned source commit, verifies the spec against
+the source manifest, copies the plugin into a private managed directory and
+prints the source and digest. It requires the explicit `--trust` preview before
+linking. `yolo plugin link <dir> --trust` remains available for local plugin
+development.
 
 ## License
 
