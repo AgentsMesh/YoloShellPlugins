@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "id": "web.client",
+  "version": "0.1.3",
+  "name": "Yolo Web Client",
+  "description": "Read-only trusted web client canary for Yolo",
+  "source": {
+    "repository": "https://github.com/AgentsMesh/YoloShellWeb",
+    "path": ".",
+    "tag": "v0.1.3",
+    "commit": "b23bce44db14913d5abb2f858bd353532fa69bdb"
+  },
+  "manifest": {
+    "schema_version": 1,
+    "id": "web.client",
+    "name": "Yolo Web Client",
+    "version": "0.1.3",
+    "description": "Read-only trusted web client canary for Yolo",
+    "platforms": [
+      "linux",
+      "macos"
+    ],
+    "startup": {
+      "command": [
+        "bun",
+        "client/scripts/plugin.ts",
+        "start"
+      ]
+    },
+    "actions": [
+      {
+        "id": "status",
+        "title": "Status",
+        "command": [
+          "bun",
+          "client/scripts/plugin.ts",
+          "status"
+        ]
+      },
+      {
+        "id": "stop",
+        "title": "Stop",
+        "command": [
+          "bun",
+          "client/scripts/plugin.ts",
+          "stop"
+        ]
+      }
+    ],
+    "web": {
+      "title": "Yolo Web Client"
+    },
+    "api": {
+      "protocol_version": 18,
+      "required_methods": [
+        "hello",
+        "list",
+        "list_agents"
+      ],
+      "optional_methods": [],
+      "features": []
+    }
+  }
+}

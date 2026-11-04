@@ -40,6 +40,7 @@ scripts/
 
 | Id | Version | Source |
 | --- | --- | --- |
+| `web.client` | `0.1.3` | [YoloShellWeb](https://github.com/AgentsMesh/YoloShellWeb) |
 | `web.client` | `0.1.2` | [YoloShellWeb](https://github.com/AgentsMesh/YoloShellWeb) |
 | `web.client` | `0.1.1` | [YoloShellWeb](https://github.com/AgentsMesh/YoloShellWeb) |
 | `web.client` | `0.1.0` | [YoloShellWeb](https://github.com/AgentsMesh/YoloShellWeb) |
@@ -53,7 +54,7 @@ Yolo's `yolo plugin install` consumes these specs:
 
 ```sh
 yolo plugin install web.client --trust
-yolo plugin install web.client --version 0.1.2 --trust
+yolo plugin install web.client --version 0.1.3 --trust
 # a fork or test registry
 yolo plugin install web.client --registry <git-url> --trust
 ```
