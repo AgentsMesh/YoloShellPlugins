@@ -61,9 +61,10 @@ The installer clones this registry, resolves the newest version unless
 `--version` is given, clones the pinned source commit, verifies the spec against
 the source manifest, copies the plugin into a private managed directory and
 prints the source and digest. It requires the explicit `--trust` preview before
-linking. `yolo plugin link <dir> --trust` remains available for local plugin
-development. The web client is a Bun process; `bun` must be on `PATH` when Yolo
-starts it.
+linking. Installing over a linked version stops and restarts a running plugin
+when its manifest declares a `stop` action. `yolo plugin link <dir> --trust`
+remains available for local plugin development. The web client is a Bun
+process; `bun` must be on `PATH` when Yolo starts it.
 
 ## License
 
