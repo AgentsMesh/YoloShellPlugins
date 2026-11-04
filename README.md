@@ -66,7 +66,8 @@ prints the source and digest. It requires the explicit `--trust` preview before
 linking. Installing over a linked version stops and restarts a running plugin
 when its manifest declares a `stop` action. `yolo plugin link <dir> --trust`
 remains available for local plugin development. The web client is a Bun
-process; `bun` must be on `PATH` when Yolo starts it.
+process; `bun` must be on `PATH` when Yolo starts it. Its token persists across
+restarts; delete the token file to rotate it.
 
 ## License
 
