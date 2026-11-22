@@ -40,6 +40,7 @@ scripts/
 
 | Id | Version | Source |
 | --- | --- | --- |
+| `web.client` | `0.2.0` | [YoloShellWeb](https://github.com/AgentsMesh/YoloShellWeb/releases/tag/v0.2.0) |
 | `web.client` | `0.1.3` | [YoloShellWeb](https://github.com/AgentsMesh/YoloShellWeb) |
 | `web.client` | `0.1.2` | [YoloShellWeb](https://github.com/AgentsMesh/YoloShellWeb) |
 | `web.client` | `0.1.1` | [YoloShellWeb](https://github.com/AgentsMesh/YoloShellWeb) |
@@ -53,17 +54,17 @@ sibling `sdk/`, so an installed 0.1.0 plugin cannot start. Use 0.1.1 or newer.
 Yolo's `yolo plugin install` consumes these specs:
 
 ```sh
-yolo plugin install web.client --trust
-yolo plugin install web.client --version 0.1.3 --trust
+yolo plugin install web.client
+yolo plugin install web.client --version 0.2.0
 # a fork or test registry
-yolo plugin install web.client --registry <git-url> --trust
+yolo plugin install web.client --registry <git-url>
 ```
 
 The installer clones this registry, resolves the newest version unless
 `--version` is given, clones the pinned source commit, verifies the spec against
 the source manifest, copies the plugin into a private managed directory and
-prints the source and digest. It requires the explicit `--trust` preview before
-linking. Installing over a linked version stops and restarts a running plugin
+enables the verified plugin. Use `--dry-run` to preview its source, commands
+and digest. Installing over a linked version stops and restarts a running plugin
 when its manifest declares a `stop` action. `yolo plugin link <dir> --trust`
 remains available for local plugin development. The web client is a Bun
 process; `bun` must be on `PATH` when Yolo starts it. Its token persists across
