@@ -40,6 +40,7 @@ scripts/
 
 | Id | Version | Source |
 | --- | --- | --- |
+| `web.client` | `0.2.11` | [YoloShellWeb](https://github.com/AgentsMesh/YoloShellWeb/releases/tag/v0.2.11) |
 | `web.client` | `0.2.10` | [YoloShellWeb](https://github.com/AgentsMesh/YoloShellWeb/releases/tag/v0.2.10) |
 | `web.client` | `0.2.0` | [YoloShellWeb](https://github.com/AgentsMesh/YoloShellWeb/releases/tag/v0.2.0) |
 | `web.client` | `0.1.3` | [YoloShellWeb](https://github.com/AgentsMesh/YoloShellWeb) |
